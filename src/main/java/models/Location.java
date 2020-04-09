@@ -3,6 +3,10 @@ package models;
 import java.sql.Date;
 
 public class Location {
+
+
+    private int id;
+
     private String name;
 
     private int capacity;
@@ -13,7 +17,7 @@ public class Location {
 
     private Date endRent;
 
-    public Location(String name, int capacity, int rentPricePerDay, Date startRent, Date endRent) {
+    public Location(int id,String name, int capacity, int rentPricePerDay, Date startRent, Date endRent) {
         this.name = name;
         this.capacity = capacity;
         this.rentPricePerDay = rentPricePerDay;
@@ -59,5 +63,13 @@ public class Location {
 
     void setName(String name) {
         this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

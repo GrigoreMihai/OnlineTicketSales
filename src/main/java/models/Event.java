@@ -5,6 +5,8 @@ import java.time.Duration;
 
 public class Event {
 
+    private int id;
+
     private String name;
 
     private Date startDate;
@@ -13,15 +15,25 @@ public class Event {
 
     private Location location;
 
-    public OrganizerCompany getOrganizerCompany() {
-        return organizerCompany;
+    public Event(int id, String name, Date startDate, Date endDate, Location location, models.Company company, long price) {
+        this.id = id;
+        this.name = name;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.location = location;
+        Company = company;
+        this.price = price;
     }
 
-    void setOrganizerCompany(OrganizerCompany organizerCompany) {
-        this.organizerCompany = organizerCompany;
+    public Company getCompany() {
+        return Company;
     }
 
-    private OrganizerCompany organizerCompany;
+    void setCompany(Company Company) {
+        this.Company = Company;
+    }
+
+    private Company Company;
 
     private long price;
 
@@ -65,4 +77,15 @@ public class Event {
         this.location = location;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setPrice(long price) {
+        this.price = price;
+    }
 }
