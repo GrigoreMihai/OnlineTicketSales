@@ -15,6 +15,24 @@ public class Event {
 
     private Location location;
 
+    public Event(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Event{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", startDate=" + startDate +
+                ", endDate=" + endDate +
+                ", location=" + location +
+                ", Company=" + Company +
+                ", price=" + price +
+                '}';
+    }
+
     public Event(int id, String name, Date startDate, Date endDate, Location location, models.Company company, long price) {
         this.id = id;
         this.name = name;
@@ -45,7 +63,7 @@ public class Event {
         return price;
     }
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
