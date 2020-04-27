@@ -1,24 +1,16 @@
-package models.User;
+package models.user;
 
 public class User {
     private int id;
-    private boolean isAdministrator;
     private String username;
     private String password;
 
     public User() {
     }
 
-    public User(int id, boolean isAdministrator, String username, String password) {
-        this.id = id;
-        this.isAdministrator = isAdministrator;
-        this.username = username;
-        this.password = password;
-    }
-
     public User(int id, String username, String password) {
-        this.isAdministrator = false;
         this.id = id;
+
         this.username = username;
         this.password = password;
     }

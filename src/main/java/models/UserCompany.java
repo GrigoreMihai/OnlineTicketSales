@@ -1,7 +1,6 @@
 package models;
 
-import models.Company;
-import models.User.User;
+import models.user.User;
 
 public class UserCompany extends User {
 

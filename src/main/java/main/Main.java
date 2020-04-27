@@ -1,7 +1,7 @@
 package main;
 
 import models.Event;
-import models.User.User;
+import models.user.User;
 import repositories.EventRepository;
 import repositories.UserRepository;
 import service.LoginService;

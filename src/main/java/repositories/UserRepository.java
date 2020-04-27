@@ -1,6 +1,6 @@
 package repositories;
 
-import models.User.User;
+import models.user.User;
 
 import java.util.Optional;
 
