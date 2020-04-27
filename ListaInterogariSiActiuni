@@ -1,15 +1,15 @@
 Actiuni :
 
 1) Adaugarea unui utilizator (v)
-2) Adaugarea unei companii
+2) Adaugarea unei companii (v)
 3) Adaugarea (crearea) unui eveniment (v)
 4) Adaugarea (crearea) unui bilet
-5) Adaugarea (crearea) cardurilor, locatiilor
+5) Adaugarea (crearea) cardurilor, locatiilor (v)
 
 Interogari :
 
 1) Listarea utilizatorilor existenti (v)
-2) Afisarea companiilor
+2) Afisarea companiilor, gasirea unei companii (v)
 3) Afisarea biletelor
-4) Afisarea locatiilor,cardurilor,evenimentelor
+4) Afisarea locatiilor,cardurilor,evenimentelor, gasirea unei locatii, eveniment (v)
 5) Logarea unui utilizator (v)

@@ -6,10 +6,7 @@ import models.Company;
 import models.Event;
 import models.Location;
 import models.user.User;
-import repositories.CompanyRepository;
-import repositories.EventRepository;
-import repositories.FileCompanyRepository;
-import repositories.UserRepository;
+import repositories.*;
 import service.LoginService;
 
 import java.sql.Date;
@@ -25,6 +22,7 @@ public class Main {
         LoginService loginService = new LoginService(LoginService.Type.FILE);
         User user2 = new User(1,"john","wrong");
         loginService.register(user);
+        loginService.register(new User(7,"Bill","password"));
         System.out.println(loginService.login(user) ? "succesfull login (expected)" : "wrong password");
         System.out.println(loginService.login(user2) ? "succesfull login" : "wrong password (expected)");
 
@@ -54,7 +52,7 @@ public class Main {
                 System.out.println("Found event");
             }
         }
-
+        // test company file read and write
         CompanyRepository companies = CompanyRepository.build(CompanyRepository.Type.FILE);
         companies.add(comp1);
         companies.add(comp2);
@@ -68,11 +66,23 @@ public class Main {
                 System.out.println("Found company");
             }
         }
+        //test locations file read and write
+        LocationRepository locations = LocationRepository.build(LocationRepository.Type.FILE);
+        locations.add(loc1);
+        locations.add(loc2);
+        locations.add(loc5);
+        System.out.println( "Listing all locations" );
+        locations.listAll().stream().forEach( l ->{
+            System.out.println(l.toString());
+        });
 
-
-
-
-
+        Optional<Location> location = locations.findLocationByLocationName("sea side");
+        if ( location.isPresent()) {
+            Location e = location.get();
+            if (e.getName().equals("sea side") ) {
+                System.out.println("Found location (expected)");
+            }
+        }
 
     }
 }

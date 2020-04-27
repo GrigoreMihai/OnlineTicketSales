@@ -21,6 +21,10 @@ public class Location {
         this.rentPricePerDay = rentPricePerDay;
 
     }
+
+    public Location() {
+    }
+
     public int getCapacity() {
         return capacity;
     }
