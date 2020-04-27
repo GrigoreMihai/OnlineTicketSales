@@ -8,7 +8,6 @@ import models.Location;
 import models.user.User;
 import repositories.*;
 import service.LoginService;
-
 import java.sql.Date;
 import java.util.Optional;
 
@@ -83,6 +82,5 @@ public class Main {
                 System.out.println("Found location (expected)");
             }
         }
-
     }
 }
