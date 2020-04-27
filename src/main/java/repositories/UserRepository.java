@@ -11,7 +11,7 @@ public interface UserRepository {
 
     static UserRepository build(Type type) {
         switch (type) {
-           // case FILE: return new FileUserRepository();
+            case FILE: return new FileUserRepository();
             case ARRAY:return new ArrayUserRepository();
             case SET : return new TreeSetUserRepository();
         }

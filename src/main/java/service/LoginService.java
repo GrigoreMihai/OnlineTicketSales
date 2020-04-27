@@ -13,9 +13,18 @@ public class LoginService {
 
     public LoginService(Type type) {
         switch (type) {
-            // case FILE: return new FileUserRepository();
-            case ARRAY :  this.userRepository = UserRepository.build(UserRepository.Type.ARRAY);
-            case SET :  this.userRepository = UserRepository.build(UserRepository.Type.SET);
+            case FILE:  {
+                this.userRepository = UserRepository.build(UserRepository.Type.FILE);
+                break;
+            }
+            case ARRAY :  {
+                this.userRepository = UserRepository.build(UserRepository.Type.ARRAY);
+                break;
+            }
+            case SET :  {
+                this.userRepository = UserRepository.build(UserRepository.Type.SET);
+                break;
+            }
         }
     }
 
