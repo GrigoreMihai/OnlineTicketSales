@@ -60,4 +60,15 @@ public class Location {
     public void setDays(int days) {
         this.days = days;
     }
+
+    @Override
+    public String toString() {
+        return "Location{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", capacity=" + capacity +
+                ", rentPricePerDay=" + rentPricePerDay +
+                ", days=" + days +
+                '}';
+    }
 }

@@ -1,6 +1,7 @@
 package repositories;
 
 import exceptions.InexistentFileExeception;
+import models.Company;
 import models.Event;
 
 import java.io.BufferedWriter;
@@ -16,11 +17,11 @@ import java.util.Optional;
 
 import static java.lang.Integer.parseInt;
 
-public class FileEventRepository implements EventRepository {
-    private final String file = "EVENTS.csv";
-    private File EventsFile = new File("EVENTS.csv");
+public class FileCompanyRepository implements CompanyRepository {
+    private final String file = "COMPANIES.csv";
+    private final File EventsFile = new File("COMPANIES.csv");
     @Override
-    public void addEvent(Event event) {
+    public void add(Company company) {
         try{
             if(!EventsFile.exists()){
                 System.out.println("Made new file");
@@ -29,7 +30,7 @@ public class FileEventRepository implements EventRepository {
             FileWriter fileWriter = new FileWriter(EventsFile, true);
 
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-            bufferedWriter.write(event.getId()+"," + event.getName()+","+ event.getPrice() + ","+ event.getCompany().toString() +"\n");
+            bufferedWriter.write(company.getId()+"," + company.getName()+","+ company.getCui() + ","+ company.getCard().toString() +"\n");
             bufferedWriter.close();
 
         } catch (IOException e) {
@@ -38,9 +39,9 @@ public class FileEventRepository implements EventRepository {
     }
 
     @Override
-    public Optional<Event> findEventByEventname(String eventName) {
+    public Optional<Company> findCompanyByCompanyname(String name) {
         Path path = Paths.get(file);
-        Event event = null;
+        Company c = null;
 
         try {
             if (!Files.exists(path)) {
@@ -49,11 +50,11 @@ public class FileEventRepository implements EventRepository {
             var list = Files.readAllLines(path);
             for (String u : list) {
                 String [] attr = u.split(",");
-                if (attr[1].equals(eventName)) {
-                    event = new Event();
-                    event.setId(parseInt(attr[0]));
-                    event.setName(attr[1]);
-                    event.setPrice(parseInt(attr[2]));
+                if (attr[1].equals(name)) {
+                    c = new Company();
+                    c.setId(parseInt(attr[0]));
+                    c.setName(attr[1]);
+                    c.setCui(attr[2]);
                     break;
                 }
             }
@@ -61,12 +62,12 @@ public class FileEventRepository implements EventRepository {
             e.printStackTrace();
         }
 
-        return Optional.ofNullable(event);
+        return Optional.ofNullable(c);
     }
     @Override
-    public Optional<List<Event>> listAll() {
+    public Optional<List<Company>> listAll() {
         Path path = Paths.get(file);
-        List<Event> events = new ArrayList<>();
+        List<Company> companies = new ArrayList<>();
 
 
         try {
@@ -76,19 +77,18 @@ public class FileEventRepository implements EventRepository {
             var list = Files.readAllLines(path);
             for (String u : list) {
                 String [] attr = u.split(",");
-                Event event = new Event();
-                event.setId(parseInt(attr[0]));
-                event.setName(attr[1]);
-                event.setPrice(parseInt(attr[2]));
-                events.add(event);
-
+                Company c = new Company();
+                c.setId(parseInt(attr[0]));
+                c.setName(attr[1]);
+                c.setCui(attr[2]);
+                companies.add(c);
 
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        return Optional.ofNullable(events);
+        return Optional.ofNullable(companies);
     }
 }
 

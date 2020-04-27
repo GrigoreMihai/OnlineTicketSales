@@ -20,6 +20,9 @@ public class Company {
         this.rating = rating;
     }
 
+    public Company() {
+    }
+
     public int getId() {
         return id;
     }

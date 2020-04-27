@@ -1,12 +1,27 @@
-1,Concert,7000,Company{id=1, name='best company', cui='fdsdsfdfs', rating=0, card=models.Card@6767c1fc}
-7,Teatru,775,Company{id=1, name='best company', cui='fdsdsfdfs', rating=0, card=models.Card@6767c1fc}
-5,Stand up comedy,5,Company{id=1, name='best company', cui='fdsdsfdfs', rating=0, card=models.Card@6767c1fc}
-1,Concert,7000,Company{id=1, name='best company', cui='fdsdsfdfs', rating=0, card=models.Card@6767c1fc}
-7,Teatru,775,Company{id=1, name='best company', cui='fdsdsfdfs', rating=0, card=models.Card@6767c1fc}
-5,Stand up comedy,5,Company{id=1, name='best company', cui='fdsdsfdfs', rating=0, card=models.Card@6767c1fc}
-1,Concert,7000,Company{id=1, name='best company', cui='fdsdsfdfs', rating=0, card=models.Card@6767c1fc}
-7,Teatru,775,Company{id=1, name='best company', cui='fdsdsfdfs', rating=0, card=models.Card@6767c1fc}
-5,Stand up comedy,5,Company{id=1, name='best company', cui='fdsdsfdfs', rating=0, card=models.Card@6767c1fc}
-1,Concert,7000,Company{id=1, name='best company', cui='fdsdsfdfs', rating=0, card=Card{id=1, cardNumber='0777 7777  7777 7777'}}
-7,Teatru,775,Company{id=1, name='best company', cui='fdsdsfdfs', rating=0, card=Card{id=1, cardNumber='0777 7777  7777 7777'}}
-5,Stand up comedy,5,Company{id=1, name='best company', cui='fdsdsfdfs', rating=0, card=Card{id=1, cardNumber='0777 7777  7777 7777'}}
+1,Concert,7000,Company{id=1, name='best company', cui='83484287', rating=0, card=Card{id=1, cardNumber='0777 7777  7777 7777'}}
+7,Teatru,775,Company{id=2, name='Best events', cui='524322', rating=10, card=Card{id=7, cardNumber='0777 7777  7555 7777'}}
+5,Stand up comedy,5,Company{id=5, name='best company', cui='542345542243', rating=7, card=Card{id=5, cardNumber='0777 5557  7777 7777'}}
+1,Concert,7000,Company{id=1, name='best company', cui='83484287', rating=0, card=Card{id=1, cardNumber='0777 7777  7777 7777'}}
+7,Teatru,775,Company{id=2, name='Best events', cui='524322', rating=10, card=Card{id=7, cardNumber='0777 7777  7555 7777'}}
+5,Stand up comedy,5,Company{id=5, name='best company', cui='542345542243', rating=7, card=Card{id=5, cardNumber='0777 5557  7777 7777'}}
+1,Concert,7000,Company{id=1, name='best company', cui='83484287', rating=0, card=Card{id=1, cardNumber='0777 7777  7777 7777'}}
+7,Teatru,775,Company{id=2, name='Best events', cui='524322', rating=10, card=Card{id=7, cardNumber='0777 7777  7555 7777'}}
+5,Stand up comedy,5,Company{id=5, name='best company', cui='542345542243', rating=7, card=Card{id=5, cardNumber='0777 5557  7777 7777'}}
+1,Concert,7000,Company{id=1, name='best company', cui='83484287', rating=0, card=Card{id=1, cardNumber='0777 7777  7777 7777'}}
+7,Teatru,775,Company{id=2, name='Best events', cui='524322', rating=10, card=Card{id=7, cardNumber='0777 7777  7555 7777'}}
+5,Stand up comedy,5,Company{id=5, name='best company', cui='542345542243', rating=7, card=Card{id=5, cardNumber='0777 5557  7777 7777'}}
+1,Concert,7000,Company{id=1, name='best company', cui='83484287', rating=0, card=Card{id=1, cardNumber='0777 7777  7777 7777'}}
+7,Teatru,775,Company{id=2, name='Best events', cui='524322', rating=10, card=Card{id=7, cardNumber='0777 7777  7555 7777'}}
+5,Stand up comedy,5,Company{id=5, name='best company', cui='542345542243', rating=7, card=Card{id=5, cardNumber='0777 5557  7777 7777'}}
+1,Concert,7000,Company{id=1, name='best company', cui='83484287', rating=0, card=Card{id=1, cardNumber='0777 7777  7777 7777'}}
+7,Teatru,775,Company{id=2, name='Best events', cui='524322', rating=10, card=Card{id=7, cardNumber='0777 7777  7555 7777'}}
+5,Stand up comedy,5,Company{id=5, name='best company', cui='542345542243', rating=7, card=Card{id=5, cardNumber='0777 5557  7777 7777'}}
+1,Concert,7000,Company{id=1, name='best company', cui='83484287', rating=0, card=Card{id=1, cardNumber='0777 7777  7777 7777'}}
+7,Teatru,775,Company{id=2, name='Best events', cui='524322', rating=10, card=Card{id=7, cardNumber='0777 7777  7555 7777'}}
+5,Stand up comedy,5,Company{id=5, name='best company', cui='542345542243', rating=7, card=Card{id=5, cardNumber='0777 5557  7777 7777'}}
+1,Concert,7000,Company{id=1, name='best company', cui='83484287', rating=0, card=Card{id=1, cardNumber='0777 7777  7777 7777'}}
+7,Teatru,775,Company{id=2, name='Best events', cui='524322', rating=10, card=Card{id=7, cardNumber='0777 7777  7555 7777'}}
+5,Stand up comedy,5,Company{id=5, name='best company', cui='542345542243', rating=7, card=Card{id=5, cardNumber='0777 5557  7777 7777'}}
+1,Concert,7000,Company{id=1, name='best company', cui='83484287', rating=0, card=Card{id=1, cardNumber='0777 7777  7777 7777'}}
+7,Teatru,775,Company{id=2, name='Best events', cui='524322', rating=10, card=Card{id=7, cardNumber='0777 7777  7555 7777'}}
+5,Stand up comedy,5,Company{id=5, name='best company', cui='542345542243', rating=7, card=Card{id=5, cardNumber='0777 5557  7777 7777'}}
