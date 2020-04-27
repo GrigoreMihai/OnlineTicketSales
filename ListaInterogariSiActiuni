@@ -11,8 +11,5 @@ Interogari :
 1) Listarea utilizatorilor existenti
 2) Afisarea companiilor
 3) Afisarea biletelor
-4) Afisarea locatiilor
-5) Afisarea evenimentelor
-6) Editarea unui utilizator
-7) Editarea unei companii
-8) Logarea unui user
+4) Afisarea locatiilor,cardurilor,evenimentelor
+5) Logarea unui utilizator

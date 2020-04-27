@@ -2,9 +2,9 @@ package repositories;
 
 import exceptions.InexistentFileExeception;
 import models.user.User;
+import service.Watcher;
 
-import java.io.IOException;
-import java.io.PrintStream;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -12,12 +12,20 @@ import java.util.Optional;
 
 public class FileUserRepository implements UserRepository {
 
-    private final String file = "USERS";
-
+    private final String file = "USERS.csv";
+    private File usersFile = new File("USERS.csv");
     @Override
     public void addUser(User user) {
-        try (PrintStream out = new PrintStream(file)) {
-            out.println(user.getId()+","+user.getUsername()+","+user.getPassword());
+        try{
+            if(!usersFile.exists()){
+                System.out.println("We had to make a new file.");
+                usersFile.createNewFile();
+            }
+            FileWriter fileWriter = new FileWriter(usersFile, true);
+
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            bufferedWriter.write(user.getId()+","+user.getUsername()+","+user.getPassword()+"\n");
+            bufferedWriter.close();
 
         } catch (IOException e) {
             e.printStackTrace();
