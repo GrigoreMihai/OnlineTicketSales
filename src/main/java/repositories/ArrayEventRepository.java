@@ -4,6 +4,7 @@ package repositories;
 
 import models.Event;
 
+import java.util.List;
 import java.util.Optional;
 
 public class ArrayEventRepository implements EventRepository {
@@ -18,6 +19,11 @@ public class ArrayEventRepository implements EventRepository {
     }
 
     @Override
+    public Optional<List<Event>> listAll() {
+        return Optional.empty();
+    }
+
+    @Override
     public Optional<Event> findEventByEventname(String Eventname) {
         for (int i = 0; i<n; i++) {
             if (Events[i].getName().equals(Eventname)) {
@@ -26,4 +32,6 @@ public class ArrayEventRepository implements EventRepository {
         }
         return Optional.empty();
     }
+
+
 }

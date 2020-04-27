@@ -18,7 +18,7 @@ public class FileUserRepository implements UserRepository {
     public void addUser(User user) {
         try{
             if(!usersFile.exists()){
-                System.out.println("We had to make a new file.");
+                System.out.println("Made new file");
                 usersFile.createNewFile();
             }
             FileWriter fileWriter = new FileWriter(usersFile, true);

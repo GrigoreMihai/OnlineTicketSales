@@ -2,17 +2,18 @@ package repositories;
 
 import models.Event;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface EventRepository {
 
     void addEvent(Event Event);
+    Optional<List<Event>> listAll ();
     Optional<Event> findEventByEventname(String Eventname);
 
     static EventRepository build(Type type) {
         switch (type) {
-            // case DB: return new DBEventRepository();
-            // case FILE: return new FileEventRepository();
+            case FILE: return new FileEventRepository();
             case ARRAY:return new ArrayEventRepository();
         }
 
@@ -20,6 +21,6 @@ public interface EventRepository {
     }
 
     enum Type {
-        DB, FILE, ARRAY
+        FILE, ARRAY
     }
 }
