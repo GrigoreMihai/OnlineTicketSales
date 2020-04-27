@@ -1,6 +1,8 @@
 package models.user;
 
-public class User {
+import java.util.Comparator;
+
+public class User implements Comparable<User> {
     private int id;
     private String username;
     private String password;
@@ -37,5 +39,10 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public int compareTo(User o) {
+        return this.username.compareTo(o.username);
     }
 }

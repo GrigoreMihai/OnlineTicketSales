@@ -1,5 +1,6 @@
 package main;
 
+import com.mysql.cj.log.Log;
 import models.Event;
 import models.user.User;
 import repositories.EventRepository;
@@ -12,7 +13,7 @@ public class Main {
         User user = new User();
         user.setUsername("bill");
         user.setPassword("12345");
-        LoginService loginService = new LoginService();
+        LoginService loginService = new LoginService(LoginService.Type.SET);
         loginService.register(user);
         System.out.println(loginService.login(user));
 
